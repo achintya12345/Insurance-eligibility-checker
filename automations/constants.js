@@ -31,21 +31,21 @@ ALL PASSWORD WILL BE REMOVED AS ONE COMMON
 FOR ALL PORTALS WILL BE PROVIDED 
 */
 
-const ECLAIM_USERNAME = "ASTER SHAAB"
-const ECLAIM_PASSWORD = "asterdmh"
+const ECLAIM_USERNAME = ""
+const ECLAIM_PASSWORD = ""
 
-const ALMADA_USERNAME = "aweer"
-const ALMADA_PASSWORD = "aweer123"
+const ALMADA_USERNAME = ""
+const ALMADA_PASSWORD = ""
 
-const DAMAN_USERNAME = "ASTERAWEER"
-const DAMAN_PASSWORD = "Aster@123"
+const DAMAN_USERNAME = ""
+const DAMAN_PASSWORD = ""
 
-const SUKOON_PASSWORD = "Aster@123"
-const SUKOON_USERNAME = "dubailandaster"
-const SUKOON_LICENSE = "DHA-F-7867194"
+const SUKOON_PASSWORD = ""
+const SUKOON_USERNAME = ""
+const SUKOON_LICENSE = ""
 
-const PULSE_USERNAME = "insurance_dmmckd"
-const PULSE_PASSWORD = "Aster@2024"
+const PULSE_USERNAME = ""
+const PULSE_PASSWORD = ""
 
 module.exports = {DAMAN_URL, 
     LOGIN_DOM_CHANGED,
