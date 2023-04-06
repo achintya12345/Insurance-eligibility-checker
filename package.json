@@ -1,0 +1,46 @@
+{
+  "config": {
+    "forge": {
+      "makers": [
+        {
+          "name": "@electron-forge/maker-zip"
+        }
+      ]
+    }
+  },
+  "name": "insurance-eligibility-checker",
+  "version": "1.0.0",
+  "description": "Aster insurance eligibility checker.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.1.0",
+    "@electron-forge/maker-deb": "^6.1.0",
+    "@electron-forge/maker-rpm": "^6.1.0",
+    "@electron-forge/maker-squirrel": "^6.1.0",
+    "@electron-forge/maker-zip": "^6.1.0",
+    "electron": "^23.1.4"
+  },
+  "dependencies": {
+    "chromedriver": "^111.0.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "open": "^9.1.0",
+    "selenium-webdriver": "^4.8.1",
+    "webdriver-manager": "^12.1.9",
+    "winston": "^3.8.2"
+  }
+}

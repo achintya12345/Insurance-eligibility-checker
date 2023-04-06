@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+    />
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    <link href="./assets/css/output.css" rel="stylesheet" />
+    
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline';"
+    />
+
+    <title>Check Eligibility</title>
+  </head>
+
+  <body style="background-color: whitesmoke">
+    <div class="flex justify-center w-full">
+      <form class="space-y-8 divide-y divide-gray-200">
+        <div class="space-y-8 divide-y divide-gray-200">
+          <div class="pt-8">
+            <div>
+              <center>
+                <img
+                  src="assets/images/aster_icon.jpeg"
+                  class="object-scale-down h-48 w-96 pt-5"
+                  style="width: 128px; height: 128px"
+                />
+              </center>
+
+              <center>
+                <h3 class="text-base font-semibold leading-6 text-gray-900">
+                  Check Insurance Eligibility
+                </h3>
+              </center>
+              <p class="mt-1 text-sm text-gray-500">
+                Enter Emirates ID and Customer Phone Number.
+              </p>
+            </div>
+            <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+              <div class="sm:col-span-3">
+                <label
+                  for="emirates-id"
+                  class="block text-sm font-medium leading-6 text-gray-900"
+                  >Emirates ID:</label
+                >
+                <div class="mt-2">
+                  <input
+                    type="text"
+                    maxlength="18"
+                    minlength="18"
+                    name="emirates-id"
+                    id="emirates-id"
+                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+                <div>
+                  <p class="text-xs text-red-600" id="emirates-id-message"></p>
+                </div>
+              </div>
+
+              <div class="sm:col-span-3">
+                <label
+                  for="phone-no"
+                  class="block text-sm font-medium leading-6 text-gray-900"
+                  >Phone Number:</label
+                >
+                <div class="mt-2">
+                  <input
+                    type="tel"
+                    name="phone-no"
+                    id="phone-no"
+                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+                <div>
+                  <p class="text-xs text-red-600" id="phone-no-message"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-5">
+          <div class="flex justify-end">
+            <button
+              style="display: none"
+              type="button"
+              id="clear_btn"
+              class="rounded-md bg-white py-2 px-3 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+            >
+              Stop
+            </button>
+            <button
+              type="button"
+              id="check_btn"
+              class="ml-3 inline-flex justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Check Eligibility
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="flex justify-center w-full" style="display: none" id="result_section">
+      <div class="px-4 sm:px-6 lg:px-8">
+        <strong>
+          <h5>Results <span class="loader" id="loadingsign" style="display: none"></span> </h5>
+        </strong>
+
+        <div class="mt-8 flow-root">
+          <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div
+              class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8"
+            >
+              <table
+                id="table_repr"
+                class="min-w-full divide-y divide-gray-300"
+                style="overflow-x: scroll"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      scope="col"
+                      class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0"
+                    >
+                      Insurance Provider
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3.5 px-3 text-left text-sm font-semibold text-gray-900"
+                    >
+                      Eligible
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3.5 px-3 text-left text-sm font-semibold text-gray-900"
+                    >
+                      View Result
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="divide-y divide-gray-200 m-px:10px"
+                  id="results-tbody"
+                ></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
